@@ -1,0 +1,14 @@
+from functools import lru_cache
+import time
+start = time.time()
+@lru_cache()
+def fibo(n):
+    if n < 2:
+        return n
+    return fibo(n-1) + fibo(n-2)
+
+result = fibo(100)
+end = time.time()
+print(result)
+print(end-start)
+    
