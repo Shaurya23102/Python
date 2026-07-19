@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": 4821,
+      "name": "Sample Widget",
+      "active": true,
+      "price": 29.99,
+      "tags": ["alpha", "beta", "gamma"],
+      "location": {"city": "Indore", "country": "India"},
+      "rating": 4.6,
+      "stock": 152
+    },
+    {
+      "id": 4822,
+      "name": "Turbo Gadget",
+      "active": true,
+      "price": 49.50,
+      "tags": ["delta", "epsilon"],
+      "location": {"city": "Pune", "country": "India"},
+      "rating": 4.2,
+      "stock": 88
+    },
+    {
+      "id": 4823,
+      "name": "Mega Sprocket",
+      "active": false,
+      "price": 12.75,
+      "tags": ["zeta"],
+      "location": {"city": "Berlin", "country": "Germany"},
+      "rating": 3.9,
+      "stock": 0
+    },
+    {
+      "id": 4824,
+      "name": "Nano Connector",
+      "active": true,
+      "price": 5.99,
+      "tags": ["theta", "iota"],
+      "location": {"city": "Austin", "country": "USA"},
+      "rating": 4.8,
+      "stock": 340
+    },
+    {
+      "id": 4825,
+      "name": "Hyper Bracket",
+      "active": true,
+      "price": 89.00,
+      "tags": ["kappa"],
+      "location": {"city": "Tokyo", "country": "Japan"},
+      "rating": 4.4,
+      "stock": 27
+    }
+  ],
+  "customers": [
+    {"id": 101, "name": "Alice Kumar", "email": "alice_k@example.com", "orders": 12},
+    {"id": 102, "name": "Raj Patel", "email": "raj_p@example.com", "orders": 5},
+    {"id": 103, "name": "Mei Tan", "email": "mtan@example.com", "orders": 8}
+  ],
+  "meta": {
+    "generated_at": "2026-07-19T10:20:00Z",
+    "total_products": 5,
+    "total_customers": 3
+  }
+}
