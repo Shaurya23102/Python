@@ -7,17 +7,54 @@ a = node(6)
 b = node(7)
 c = node(8)
 d = node(9)
+e = node(10)
 head = a
 
+# ll = 6,7,8,9,10
 a.next = b  # type: ignore
 b.next = c  # type: ignore
 c.next = d  # type: ignore
-
+d.next = e  # type: ignore
 def printll(head):
-    curr = head
+    curr = head # ll mai head humesha fix rkhte hai agar khuch access krna ho toh extra var use krte hai
     while curr is not None:
         print(curr.data, end=" -> ")
         curr = curr.next
     print("None")
 
-printll(a)
+
+newnode = node(3)
+
+def insatbegin(head, newnode):
+    newnode.next = head   # point new node to old head
+    head = newnode         # update head
+    return head           # return new head
+head = insatbegin(head,newnode)
+
+# ll = 3,6,7,8,9,10
+
+newnode = node(11)
+def insatend(head,newnode):
+    curr = head
+    while curr.next!= None:
+        curr = curr.next
+    curr.next = newnode
+    return head # returning coz this func call insatend(head, newnode) makes head = type none which will throw and error 
+head = insatend(head, newnode)
+
+#ll = 3,6,7,8,9,10,11
+
+k = 3
+newnode = node(13)
+def insatmid(head,k,newnode):
+    curr = head
+    for i in range(k-2):
+        curr = curr.next
+    newnode.next = curr.next     
+    curr.next = newnode
+    return head 
+
+# ll = 3,6,13,7,8,9,10,11
+
+head = insatmid(head,k,newnode)a
+printll(head)
