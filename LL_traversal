@@ -1,0 +1,23 @@
+class node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+a = node(6)
+b = node(7)
+c = node(8)
+d = node(9)
+head = a
+
+a.next = b  # type: ignore
+b.next = c  # type: ignore
+c.next = d  # type: ignore
+
+def printll(head):
+    curr = head
+    while curr is not None:
+        print(curr.data, end=" -> ")
+        curr = curr.next
+    print("None")
+
+printll(a)
