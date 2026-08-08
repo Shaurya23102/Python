@@ -56,5 +56,38 @@ def insatmid(head,k,newnode):
 
 # ll = 3,6,13,7,8,9,10,11
 
-head = insatmid(head,k,newnode)a
+head = insatmid(head,k,newnode)
+
+def delfirst(head):
+    if head is None:
+        return None
+    head = head.next
+    return head
+head = delfirst(head)
+
+# ll = 6,13,7,8,9,10,11
+
+def dellast(head):
+    curr = head 
+    while curr.next.next!= None:
+        curr = curr.next 
+    curr.next = None
+    return head
+head = dellast(head)
+
+# ll = 6,13,7,8,9,10
+
+def delatany(head,k):
+    curr = head
+    for i in range(k-1):
+        curr = curr.next
+    curr.next = curr.next.next
+
+    return head
+head = delatany(head,k)
+
+# ll = 6,13,7,9,10
+
+
 printll(head)
+
